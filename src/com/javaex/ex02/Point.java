@@ -2,23 +2,23 @@ package com.javaex.ex02;
 
 public class Point {
 	//필드
-	int x;
-	int y;
+	private int xcoo;
+	private int ycoo;
 	
 	//메소드
-	public void setX() {
-		
+	public void setX(int x) {
+		xcoo = x;
 	}
-	public void setY() {
-		
+	public void setY(int y) {
+		ycoo = y;
 	}
 	public int getX() {
-		return x;
+		return xcoo;
 	}
 	public int getY() {
-		return y;
+		return ycoo;
 	}
 	public void draw() {
-		System.out.println("점[x="+x+", y="+y+"]을 그렸습니다.");
+		System.out.println("점[x="+xcoo+", y="+ycoo+"]을 그렸습니다.");
 	}
 }
