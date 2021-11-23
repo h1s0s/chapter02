@@ -3,7 +3,6 @@ package com.javaex.ex02;
 public class PointApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Point dot1 = new Point();
 		dot1.setX(5);
 		dot1.setY(5);
