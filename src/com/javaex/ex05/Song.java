@@ -12,15 +12,29 @@ public class Song {
 	
 	//생성자
 	public Song() {
+		System.out.println("Song0()");
 		
 	}
-	public Song(String title, String artist, String album, String composer, int year, int track) {
+	public Song(String title, String artist, String album, String composer) {
+		this(title, artist, album, composer, 0);
+		System.out.println("Song(4)");
+	}
+	public Song(String title, String artist, String album, String composer, int year) {
 		this.title = title;
 		this.artist = artist;
 		this.album = album;
+		//작곡가 이름 최대 10글자 까지 입력(조건)
 		this.composer = composer;
+		
+		//년도 2021년 이후 연도가 들어오면 2021로 처리
 		this.year = year;
+		System.out.println("Song(5)");
+	}
+	public Song(String title, String artist, String album, String composer, int year, int track) {
+		this(title, artist, album, composer, year);
+		//다른 생성자(song(5))를 부르는 코드
 		this.track = track;
+		System.out.println("Song(6)");
 	}
 
 	//메소드 g-s

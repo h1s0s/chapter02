@@ -21,16 +21,18 @@ public class Point {
 	//
 	//생성자는 여러개 만들어 놔도 생성할때는 한가지만 쓰임
 	public Point() {//디폴트 생성자
-		
+		System.out.println("Point(0)");
 	}
 	public Point(int x) {//1가지 값을 받을 생성자
 		this.x = x;
+		System.out.println("Point(1)");
 	}
 	
 	
 	public Point(int x, int y) {//2가지 값을 받을 생성자
 		this.x = x;
 		this.y = y;
+		System.out.println("Point(2)");
 	}
 	
 	//메소드
@@ -51,5 +53,15 @@ public class Point {
 	}
 	public void draw() {
 		System.out.println("점[x="+x+", y="+y+"]을 그렸습니다.");
+	}
+	//action-true 그리는 기능, action-false 지우는 기능
+	public void draw(boolean action) {
+		if(action == true) {
+			System.out.println("점[x="+x+", y="+y+"]을 그렸습니다.");
+		} else if(action == false) {
+			System.out.println("점[x="+x+", y="+y+"]을 지웠습니다.");
+		} else {
+			System.out.println("잘못된 입력");
+		}
 	}
 }

@@ -13,9 +13,9 @@ public class PointApp {
 //		dot2.setY(23);
 		dot2.draw();
 		
-		Point dot3 = new Point(12);
-		dot3.setY(13);
-		dot3.draw();
+		Point dot3 = new Point(55,65);
+		dot3.draw(true);
+		dot3.draw(false);
 	}
 
 }
