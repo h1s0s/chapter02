@@ -53,27 +53,35 @@ public class TV {
 		}
 	}
 	public void volume(int volume) {//볼륨을 조절하는 메소드(0~100)
-		if (volume>100) {//볼륨이 100을 넘어갈때
-			this.volume = 100;
-		} else if (volume<0) {//볼륨이 0보다 작을때
-			this.volume = 0;
+		if(this.power==true) {
+			if (volume>100) {//볼륨이 100을 넘어갈때
+				this.volume = 100;
+			} else if (volume<0) {//볼륨이 0보다 작을때
+				this.volume = 0;
+			} else {
+				this.volume = volume;
+			}	
 		} else {
-			this.volume = volume;
+			System.out.println("전원이 꺼져 채널이 변경되지 않습니다.");
 		}
 	}
 	public void volume(boolean up) {//볼륨을 조절하는 메소드
-		if (up==true) {//
-			if (volume>100) {//볼륨이 100을 넘어갈때
-				this.volume = 100;
-			} else {
-				++this.volume;
+		if(this.power==true) {
+			if (up==true) {//
+				if (volume>100) {//볼륨이 100을 넘어갈때
+					this.volume = 100;
+				} else {
+					++this.volume;
+				}
+			}else if (up==false) {
+				if(volume<0) {//볼륨이 0보다 작을때
+					this.volume = 0;
+				} else {
+					--this.volume;
+				}
 			}
-		}else if (up==false) {
-			if(volume<0) {//볼륨이 0보다 작을때
-				this.volume = 0;
-			} else {
-				--this.volume;
-			}
+		} else {
+			System.out.println("전원이 꺼져 볼륨이 변경되지 않습니다.");
 		}
 	}
 	public void channel(int channel) {
