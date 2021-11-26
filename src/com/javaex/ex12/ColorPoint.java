@@ -12,14 +12,13 @@ public class ColorPoint extends Point{
 		this.color = color;
 	}
 	public ColorPoint(int x, int y, String color) {
-		super.setX(x);
-		super.setY(y);
+		super(x, y);//부모 생성자(x,y)인거 가져오기
 		this.color = color;
 	}
 	//메소드 일반
 	public void showInfo() {
-		System.out.println("x:"+getX());
-		System.out.println("y:"+getY());
+		System.out.println("x:"+super.x);
+		System.out.println("y:"+super.y);
 		System.out.println("color:"+this.color);
 	}
 }
