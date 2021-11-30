@@ -26,6 +26,7 @@ public class ShapeApp {
 		for(int i=0; i<rArray.length; i++) {
 			rArray[i].draw();
 		}
+		
 		////////
 		///원///
 		////////
