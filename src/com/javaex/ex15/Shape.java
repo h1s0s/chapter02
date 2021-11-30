@@ -34,4 +34,8 @@ public class Shape {
 	public String toString() {
 		return "Shape [lineColor=" + lineColor + ", fillColor=" + fillColor + "]";
 	}
+	public void draw() {
+		System.out.println("선색:"+lineColor+" 면색:"+fillColor+" 도형을 그렸습니다.");
+		
+	}
 }
